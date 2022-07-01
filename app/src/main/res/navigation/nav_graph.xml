@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/charactersFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.university.superheroes.fragments.CharactersFragment"
+        android:label="CharactersFragment" >
+        <action
+            android:id="@+id/action_charactersFragment_to_detailedCharacterFragment"
+            app:destination="@id/detailedCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedCharacterFragment"
+        android:name="com.university.superheroes.fragments.DetailedCharacterFragment"
+        android:label="DetailedCharacterFragment" >
+        <argument
+            android:name="characterId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
